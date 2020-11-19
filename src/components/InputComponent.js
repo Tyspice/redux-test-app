@@ -3,7 +3,7 @@ import { Form, Button, ButtonGroup } from "react-bootstrap";
 import { v4 as uuidv4 } from "uuid";
 // import { newPost, altGetPostAsync, deleteAll } from "../actions";
 import { useDispatch } from "react-redux";
-import { createPost, deleteAllPosts, fetchRemotePosts } from "../features/posts/postsSlice";
+import { createPost, deleteAllPosts, fetchRemotePosts } from "../store/features/postsSlice";
 
 export default function InputComponent() {
 	const [title, setTitle] = React.useState("");
