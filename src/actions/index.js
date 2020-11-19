@@ -22,11 +22,6 @@ export const deleteAll = () => {
     }
 }
 
-export const getPostAsync = createAsyncThunk(GET_POST, async () => {
-    const response = await axios.get('https://jsonplaceholder.typicode.com/posts');
-    return response.data
-})
-
 export const altGetPostAsync = () => async dispatch => {
     const response = await axios.get('https://jsonplaceholder.typicode.com/posts');
     dispatch({

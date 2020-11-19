@@ -12,7 +12,7 @@ const MyPostComponent = () => {
 			{posts.map((post) => {
 				return (
 					<Card style={{width: "300px", height: "auto", marginTop: "50px"}} key={post.id}>
-						<Card.Header>Tyner's Blog Post</Card.Header>
+						<Card.Header>Blog Post</Card.Header>
 						<Card.Body>
 							<Card.Title>{post.title}</Card.Title>
 							<Card.Text>{post.body}</Card.Text>
