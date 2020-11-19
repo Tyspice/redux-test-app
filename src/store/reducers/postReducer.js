@@ -1,4 +1,4 @@
-import { DELETE_POST, GET_POST, NEW_POST, DELETE_ALL } from "../actions/types";
+import { DELETE_POST, GET_POST, NEW_POST, DELETE_ALL } from "../actionTypes";
 import { v4 as uuidv4 } from "uuid";
 
 const postReducer = (state = [], action) => {

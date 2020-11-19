@@ -1,7 +1,7 @@
 import React from "react";
 import { Form, Button, ButtonGroup } from "react-bootstrap";
 import { v4 as uuidv4 } from "uuid";
-import { newPost, altGetPostAsync, deleteAll } from "../actions";
+import { newPost, altGetPostAsync, deleteAll } from "../store/actions/postActions";
 import { useDispatch } from "react-redux";
 
 export default function InputComponent() {

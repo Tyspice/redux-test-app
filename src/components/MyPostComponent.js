@@ -1,7 +1,7 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
-import { deletePost } from '../actions'
+import { deletePost } from '../store/actions/postActions'
 
 const MyPostComponent = () => {
 	const posts = useSelector((state) => state.posts);

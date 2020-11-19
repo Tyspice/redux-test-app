@@ -1,5 +1,4 @@
-import { NEW_POST, DELETE_POST, GET_POST, DELETE_ALL } from "./types";
-import { createAsyncThunk } from "@reduxjs/toolkit";
+import { NEW_POST, DELETE_POST, GET_POST, DELETE_ALL } from "../actionTypes";
 import axios from 'axios';
 
 export const newPost = payload => {
