@@ -1,8 +1,9 @@
 import React from "react";
 import { Form, Button, ButtonGroup } from "react-bootstrap";
 import { v4 as uuidv4 } from "uuid";
-import { newPost, altGetPostAsync, deleteAll } from "../actions";
+// import { newPost, altGetPostAsync, deleteAll } from "../actions";
 import { useDispatch } from "react-redux";
+import { createPost, deleteAllPosts, fetchRemotePosts } from "../features/posts/postsSlice";
 
 export default function InputComponent() {
 	const [title, setTitle] = React.useState("");
@@ -12,7 +13,7 @@ export default function InputComponent() {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		dispatch(newPost({ id: uuidv4(), title, body }));
+		dispatch(createPost({ id: uuidv4(), title, body }));
 		setTitle("");
 		setBody("");
 	};
@@ -41,8 +42,8 @@ export default function InputComponent() {
 				<Button variant="primary" type="submit" onClick={handleSubmit}>
 					Submit
 				</Button>
-				<Button variant="success" onClick={() => dispatch(altGetPostAsync())}>Get Outside Blog Posts</Button>
-				<Button variant="danger" onClick={() => dispatch(deleteAll())}>Delete All</Button>
+				<Button variant="success" onClick={() => dispatch(fetchRemotePosts())}>Get Outside Blog Posts</Button>
+				<Button variant="danger" onClick={() => dispatch(deleteAllPosts())}>Delete All</Button>
 			</ButtonGroup>
 		</Form>
 	);
